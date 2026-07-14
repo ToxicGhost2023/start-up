@@ -8,10 +8,10 @@ type StoreLayoutProps = {
 
 export default function StoreLayout({ children }: StoreLayoutProps) {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative flex min-h-screen flex-col">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(214,185,140,0.22),transparent_30%),linear-gradient(180deg,#f8f4ed_0%,#f3eee6_100%)]" />
       <SiteHeader />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
       <SiteFooter />
     </div>
   );

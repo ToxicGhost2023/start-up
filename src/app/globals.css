@@ -28,29 +28,30 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  
 }
 
 .landing-shell {
-  height: 100dvh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
+  min-height: 100dvh;
+  overflow: visible;
+  scroll-snap-type: none;
   scroll-behavior: smooth;
 }
 
 .landing-panel {
   position: relative;
   min-height: 100dvh;
-  height: 100dvh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  height: auto;
   overflow: hidden;
 }
 
@@ -64,7 +65,7 @@ body {
   position: relative;
   z-index: 1;
   display: flex;
-  height: 100%;
+  min-height: 100dvh;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -74,7 +75,6 @@ body {
 .landing-panel__frame {
   position: relative;
   display: flex;
-  height: min(880px, calc(100dvh - 40px));
   width: min(1440px, 100%);
   overflow: hidden;
   border-radius: 2rem;
@@ -90,7 +90,6 @@ body {
 
 .landing-panel__content {
   display: flex;
-  height: 100%;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -112,10 +111,6 @@ body {
     padding: 24px;
   }
 
-  .landing-panel__frame {
-    height: min(880px, calc(100dvh - 48px));
-  }
-
   .landing-panel__content {
     gap: 2rem;
     padding: 2rem;
@@ -129,19 +124,11 @@ body {
 }
 
 @media (max-width: 767px) {
-  body {
-    overflow: auto;
-  }
-
   .landing-shell {
-    height: auto;
     min-height: 100svh;
-    overflow: visible;
-    scroll-snap-type: none;
   }
 
   .landing-panel {
-    height: auto;
     min-height: 100svh;
   }
 
@@ -152,7 +139,6 @@ body {
   }
 
   .landing-panel__frame {
-    height: auto;
     min-height: calc(100svh - 24px);
     border-radius: 1.5rem;
   }
