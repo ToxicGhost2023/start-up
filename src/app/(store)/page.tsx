@@ -1,3 +1,4 @@
+import { CategoryShowcaseSection } from "@/features/landing/components/server/category-showcase-section";
 import { FeaturedProductsSection } from "@/features/landing/components/server/featured-products-section";
 import { HeroSection } from "@/features/landing/components/server/hero-section";
 import { WhyUsSection } from "@/features/landing/components/server/why-us-section";
@@ -8,6 +9,7 @@ export default function HomePage() {
       <HeroSection />
       <FeaturedProductsSection />
       <WhyUsSection />
+      <CategoryShowcaseSection />
     </section>
   );
 }
