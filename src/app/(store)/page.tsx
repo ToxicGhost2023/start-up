@@ -7,13 +7,13 @@ import { WhyUsSection } from "@/features/landing/components/server/why-us-sectio
 
 export default function HomePage() {
   return (
-    <section className="container-shell py-24 md:py-32">
+    <main className="landing-shell">
       <HeroSection />
-      <FeaturedProductsSection />
       <WhyUsSection />
+      <FeaturedProductsSection />
       <CategoryShowcaseSection />
       <TestimonialsSection />
       <FinalCtaSection />
-    </section>
+    </main>
   );
 }
