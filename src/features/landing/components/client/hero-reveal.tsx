@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import type { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
 type HeroRevealProps = PropsWithChildren<{
   delay?: number;

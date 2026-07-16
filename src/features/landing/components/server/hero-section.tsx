@@ -1,18 +1,18 @@
 import Link from "next/link";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowLeft, Star } from "lucide-react";
 import { HeroReveal } from "../client/hero-reveal";
 import Image from "next/image";
 
 const metrics = [
-  { value: "4.9/5", label: "Customer rating" },
-  { value: "12k+", label: "Monthly orders" },
-  { value: "48h", label: "Fresh roast promise" },
+  { value: "۴.۹/۵", label: "امتیاز مشتریان" },
+  { value: "۱۲k+", label: "سفارش ماهانه" },
+  { value: "۴۸h", label: "تضمین تازگی" },
 ];
 
 const highlights = [
-  "Single-origin beans",
-  "Roasted in small batches",
-  "Fast delivery, premium packaging",
+  "دانه‌های تک‌خاستگاه",
+  "بو داده در تیراژ محدود",
+  "ارسال سریع، بسته‌بندی لوکس",
 ];
 
 export function HeroSection() {
@@ -24,21 +24,20 @@ export function HeroSection() {
             <HeroReveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/65 px-4 py-2 text-sm font-medium text-(--color-primary) shadow-[0_10px_30px_rgba(111,78,55,0.08)] backdrop-blur-xl">
                 <span className="h-2 w-2 rounded-full bg-(--color-primary)" />
-                Freshly roasted specialty coffee
+                قهوه تخصصی تازه بو داده
               </span>
             </HeroReveal>
 
             <HeroReveal delay={0.08}>
               <h1 className="mt-6 text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-(--color-foreground) md:text-6xl lg:text-7xl">
-                Premium coffee made for calm rituals and busy mornings
+                قهوه‌ای ممتاز برای صبح‌های آرام و روزهای پرهیجان
               </h1>
             </HeroReveal>
 
             <HeroReveal delay={0.16}>
               <p className="mt-6 max-w-xl text-base leading-8 text-[rgba(31,23,32,0.72)] md:text-lg">
-                Discover refined blends, single-origin beans, and a modern
-                coffee experience designed with warmth, speed, and quiet luxury
-                in mind.
+                ترکیبات خوش‌طعم، دانه‌های تک‌خاستگاه و تجربه‌ای مدرن از قهوه
+                که با گرمی، سرعت و زیبایی طراحی شده است.
               </p>
             </HeroReveal>
 
@@ -48,15 +47,15 @@ export function HeroSection() {
                   href="/shop"
                   className="inline-flex h-12 items-center justify-center rounded-full bg-(--color-primary) px-6 text-sm font-medium text-white shadow-[0_16px_40px_rgba(111,78,55,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-foreground)"
                 >
-                  Shop coffee
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  خرید قهوه
+                  <ArrowLeft className="mr-2 h-4 w-4" />
                 </Link>
 
                 <Link
                   href="/collections"
                   className="inline-flex h-12 items-center justify-center rounded-full border border-white/50 bg-white/60 px-6 text-sm font-medium text-(--color-foreground) backdrop-blur-xl transition-colors duration-200 hover:bg-white/80"
                 >
-                  Explore collections
+                  مشاهده مجموعه‌ها
                 </Link>
               </div>
             </HeroReveal>
@@ -79,7 +78,7 @@ export function HeroSection() {
                       <Star className="h-4 w-4 fill-current" />
                     </div>
                     <p className="mt-1 text-sm text-[rgba(31,23,32,0.68)]">
-                      Trusted by thousands of coffee lovers
+                      مورد اعتماد هزاران عاشق قهوه
                     </p>
                   </div>
                 </div>
@@ -106,7 +105,7 @@ export function HeroSection() {
                 <div className="relative aspect-4/5 min-h-105 overflow-hidden rounded-4xl sm:min-h-130 lg:min-h-160">
                   <Image
                     src="/assets/Banner/banner.webp"
-                    alt="Premium coffee product"
+                    alt="قهوه ممتاز"
                     fill
                     priority
                     sizes="(max-width: 640px) 92vw, (max-width: 1024px) 80vw, 42vw"

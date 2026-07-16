@@ -1,73 +1,61 @@
 import Link from "next/link";
-import { ArrowUpRight, Bean, Flame, Leaf, MoonStar, Waves } from "lucide-react";
+import { ArrowUpLeft, Bean, Flame, Leaf, MoonStar, Waves } from "lucide-react";
 import { HeroReveal } from "../client/hero-reveal";
 
 const categories = [
   {
-    title: "30/70 Blend",
-    subtitle: "30% Arabica • 70% Robusta",
-    description:
-      "Dense crema, bold body, and a stronger caffeine kick for intense espresso lovers.",
+    title: "ترکیب ۳۰/۷۰",
+    subtitle: "۳۰٪ عربیکا • ۷۰٪ روبوستا",
+    description: "کرمای متراکم، بدن قوی و کافئین بیشتر برای عاشقان اسپرسو",
     href: "/shop?category=30-70-blend",
     icon: Flame,
-    accent:
-      "from-[rgba(111,78,55,0.18)] via-[rgba(214,185,140,0.1)] to-transparent",
-    tags: ["Espresso", "Strong", "High Caffeine"],
+    accent: "from-[rgba(111,78,55,0.18)] via-[rgba(214,185,140,0.1)] to-transparent",
+    tags: ["اسپرسو", "قوی", "کافئین بالا"],
   },
   {
-    title: "40/60 Blend",
-    subtitle: "40% Arabica • 60% Robusta",
-    description:
-      "A balanced profile with chocolate depth, rounded bitterness, and smoother texture.",
+    title: "ترکیب ۴۰/۶۰",
+    subtitle: "۴۰٪ عربیکا • ۶۰٪ روبوستا",
+    description: "طعم متعادل با عمق شکلاتی، تلخی ملایم و بافت نرم‌تر",
     href: "/shop?category=40-60-blend",
     icon: Bean,
-    accent:
-      "from-[rgba(89,58,39,0.16)] via-[rgba(214,185,140,0.08)] to-transparent",
-    tags: ["Balanced", "Classic", "Crema Rich"],
+    accent: "from-[rgba(89,58,39,0.16)] via-[rgba(214,185,140,0.08)] to-transparent",
+    tags: ["متعادل", "کلاسیک", "کرمای غنی"],
   },
   {
-    title: "100% Arabica",
-    subtitle: "Single-origin and specialty lots",
-    description:
-      "Cleaner acidity, floral aroma, and layered notes for refined daily brewing rituals.",
+    title: "۱۰۰٪ عربیکا",
+    subtitle: "دانه‌های تک‌خاستگاه و ویژه",
+    description: "اسیدیته تمیز، رایحه گل‌دار و لایه‌های طعمی برای دم‌آوری روزانه",
     href: "/shop?category=arabica",
     icon: Leaf,
-    accent:
-      "from-[rgba(126,156,110,0.14)] via-[rgba(214,185,140,0.08)] to-transparent",
-    tags: ["Specialty", "Aromatic", "Smooth"],
+    accent: "from-[rgba(126,156,110,0.14)] via-[rgba(214,185,140,0.08)] to-transparent",
+    tags: ["تخصصی", "خوش‌رایحه", "نرم"],
   },
   {
-    title: "100% Robusta",
-    subtitle: "Powerful and full-bodied",
-    description:
-      "Dark, earthy, and highly caffeinated beans built for moka pots and strong extractions.",
+    title: "۱۰۰٪ روبوستا",
+    subtitle: "قوی و پر بدن",
+    description: "دانه‌های تیره، خاکی و کافئین‌دار برای موکاپات و عصاره‌گیری قوی",
     href: "/shop?category=robusta",
     icon: Waves,
-    accent:
-      "from-[rgba(84,63,47,0.18)] via-[rgba(214,185,140,0.07)] to-transparent",
-    tags: ["Bold", "Heavy Body", "Daily Energy"],
+    accent: "from-[rgba(84,63,47,0.18)] via-[rgba(214,185,140,0.07)] to-transparent",
+    tags: ["پرجرأت", "بدن سنگین", "انرژی روزانه"],
   },
   {
-    title: "Flavored Coffee",
-    subtitle: "Infused roast profiles",
-    description:
-      "Vanilla, hazelnut, caramel, and seasonal flavor notes for a softer, sweeter cup.",
+    title: "قهوه طعم‌دار",
+    subtitle: "پروفایل‌های دم‌آوری تزریق‌شده",
+    description: "طعم‌های وانیل، فندق، کارامل و فصلی برای فنجانی شیرین‌تر",
     href: "/shop?category=flavored",
     icon: MoonStar,
-    accent:
-      "from-[rgba(164,124,92,0.16)] via-[rgba(214,185,140,0.08)] to-transparent",
-    tags: ["Sweet", "Aromatic", "Casual Brew"],
+    accent: "from-[rgba(164,124,92,0.16)] via-[rgba(214,185,140,0.08)] to-transparent",
+    tags: ["شیرین", "خوش‌رایحه", "دم‌آوری راحت"],
   },
   {
-    title: "Decaf & Light Roast",
-    subtitle: "Low stimulation, refined taste",
-    description:
-      "Gentler options for evening coffee moments without losing elegance and character.",
+    title: "بدون کافئین و روشن",
+    subtitle: "محرک کم، طعم دلپذیر",
+    description: "گزینه‌های ملایم برای لحظات عصرانه بدون از دست دادن شخصیت",
     href: "/shop?category=decaf-light-roast",
     icon: SparkIcon,
-    accent:
-      "from-[rgba(180,160,132,0.16)] via-[rgba(255,255,255,0.08)] to-transparent",
-    tags: ["Decaf", "Light", "Evening Cup"],
+    accent: "from-[rgba(180,160,132,0.16)] via-[rgba(255,255,255,0.08)] to-transparent",
+    tags: ["بدون کافئین", "روشن", "فنجان عصرانه"],
   },
 ];
 
@@ -84,21 +72,20 @@ export function CategoryShowcaseSection() {
         <div className="mx-auto max-w-3xl text-center">
           <HeroReveal>
             <span className="inline-flex items-center rounded-full border border-white/50 bg-white/60 px-4 py-2 text-sm font-medium text-(--color-primary) backdrop-blur-xl">
-              Coffee Profiles
+              پروفایل‌های قهوه
             </span>
           </HeroReveal>
 
           <HeroReveal delay={0.08}>
             <h2 className="mt-6 text-3xl font-semibold tracking-[-0.04em] text-(--color-foreground) md:text-4xl lg:text-5xl lg:leading-[1.1]">
-              Choose your roast by taste, body, and caffeine level
+              قهوه‌ خود را بر اساس طعم، بدن و سطح کافئین انتخاب کنید
             </h2>
           </HeroReveal>
 
           <HeroReveal delay={0.16}>
             <p className="mt-6 text-base leading-8 text-[rgba(31,23,32,0.72)] md:text-lg">
-              From bold Robusta-forward blends to elegant Arabica selections,
-              discover profiles crafted for espresso, moka pot, and slow ritual
-              brews.
+              از ترکیبات قوی روبوستا تا انتخاب‌های ظریف عربیکا، پروفایل‌هایی را
+              کشف کنید که برای اسپرسو، موکاپات و دم‌آوری‌های آیینی طراحی شده‌اند.
             </p>
           </HeroReveal>
         </div>
@@ -108,16 +95,10 @@ export function CategoryShowcaseSection() {
             const Icon = category.icon;
 
             return (
-              <HeroReveal
-                key={category.title}
-                delay={0.06 * (index + 1)}
-                y={20}
-              >
+              <HeroReveal key={category.title} delay={0.06 * (index + 1)} y={20}>
                 <Link href={category.href} className="group block h-full">
                   <article className="glass-card relative flex h-full min-h-70 flex-col overflow-hidden rounded-4xl border border-white/45 bg-white/45 p-6 shadow-[0_16px_50px_rgba(111,78,55,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:border-white/70 hover:bg-white/55 hover:shadow-[0_28px_80px_rgba(111,78,55,0.12)]">
-                    <div
-                      className={`pointer-events-none absolute inset-0 bg-linear-to-br ${category.accent}`}
-                    />
+                    <div className={`pointer-events-none absolute inset-0 bg-linear-to-br ${category.accent}`} />
                     <div className="pointer-events-none absolute right-0 top-0 h-28 w-28 rounded-full bg-white/20 blur-3xl transition-transform duration-500 group-hover:scale-125" />
 
                     <div className="relative flex items-start justify-between gap-4">
@@ -125,8 +106,8 @@ export function CategoryShowcaseSection() {
                         <Icon className="h-5 w-5" />
                       </div>
 
-                      <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/50 bg-white/60 text-(--color-primary) transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:bg-(--color-primary) group-hover:text-white">
-                        <ArrowUpRight className="h-4 w-4" />
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/50 bg-white/60 text-(--color-primary) transition-all duration-300 group-hover:-translate-y-0.5 group-hover:-translate-x-0.5 group-hover:bg-(--color-primary) group-hover:text-white">
+                        <ArrowUpLeft className="h-4 w-4" />
                       </div>
                     </div>
 

@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Shabnam";
+  src: url("/assets/fonts/Shabnam-Light-FD.woff2") format("woff2"),
+    url("/assets/fonts/Shabnam-Light-FD.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shabnam";
+  src: url("/assets/fonts/Shabnam-FD.woff2") format("woff2"),
+    url("/assets/fonts/Shabnam-FD.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shabnam";
+  src: url("/assets/fonts/Shabnam-Medium-FD.woff2") format("woff2"),
+    url("/assets/fonts/Shabnam-Medium-FD.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Shabnam";
+  src: url("/assets/fonts/Shabnam-Bold-FD.woff2") format("woff2"),
+    url("/assets/fonts/Shabnam-Bold-FD.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #f6f4ee;
   --foreground: #1f1720;
@@ -10,6 +46,8 @@
   --border: rgba(111, 78, 55, 0.16);
   --card: rgba(255, 250, 244, 0.72);
   --card-strong: rgba(255, 248, 240, 0.88);
+  --font-shabnam: "Shabnam", system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-shabnam);
 }
 
 @theme inline {
@@ -22,23 +60,33 @@
   --color-border: var(--border);
   --color-card: var(--card);
   --color-card-strong: var(--card-strong);
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-shabnam);
 }
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
 body {
+  font-family: var(--font-shabnam);
+  direction: rtl;
   min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 body {
   overflow-x: hidden;
   overflow-y: auto;
 
-  
+}
+
+.latin-nums {
+  font-variant-numeric: tabular-nums;
+  font-family: sans-serif;
 }
 
 .landing-shell {
@@ -79,11 +127,7 @@ body {
   overflow: hidden;
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.04)
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(16px);
 }
@@ -106,6 +150,19 @@ body {
   position: relative;
 }
 
+.container-shell {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.glass-card {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 @media (min-width: 768px) {
   .landing-panel__inner {
     padding: 24px;
@@ -115,11 +172,19 @@ body {
     gap: 2rem;
     padding: 2rem;
   }
+
+  .container-shell {
+    padding: 0 2.5rem;
+  }
 }
 
 @media (min-width: 1280px) {
   .landing-panel__content {
     padding: 3rem;
+  }
+
+  .container-shell {
+    padding: 0 4rem;
   }
 }
 

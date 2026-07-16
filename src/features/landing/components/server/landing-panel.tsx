@@ -14,9 +14,8 @@ export function LandingPanel({
 }: LandingPanelProps) {
   return (
     <section className={`landing-panel ${className ?? ""}`}>
-      {bg ? <div className="landing-panel__bg">{bg}</div> : null}
-      {depth ? <div className="landing-panel__depth">{depth}</div> : null}
-
+      {bg && <div className="landing-panel__bg">{bg}</div>}
+      {depth && <div className="landing-panel__depth">{depth}</div>}
       <div className="landing-panel__inner">
         <div className="landing-panel__content">{children}</div>
       </div>

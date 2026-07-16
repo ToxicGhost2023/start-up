@@ -4,27 +4,23 @@ import { HeroReveal } from "../client/hero-reveal";
 const features = [
   {
     icon: Compass,
-    title: "Single-Origin Sourcing",
-    description:
-      "We partner directly with family-owned farms from Colombia to Ethiopia, ensuring fair trade and exceptional quality control at the source.",
+    title: "تامین تک‌خاستگاه",
+    description: "ما مستقیماً با مزارع خانوادگی از کلمبیا تا اتیوپی همکاری می‌کنیم تا تجارت عادلانه و کنترل کیفیت استثنایی را تضمین کنیم.",
   },
   {
     icon: Award,
-    title: "Small-Batch Roasting",
-    description:
-      "Every single batch is custom-roasted under precise temperature curves to highlight each bean's natural tasting notes and floral aromas.",
+    title: "بو دادن در تیراژ محدود",
+    description: "هر بچ با منحنی‌های دمایی دقیق بو داده می‌شود تا نت‌های طعمی و رایحه‌های طبیعی هر دانه برجسته شود.",
   },
   {
     icon: Truck,
-    title: "Roasted & Shipped Today",
-    description:
-      "We stamp the roast date on every bag. Your order is roasted, packed in nitrogen-flushed bags, and shipped within 24 hours.",
+    title: "بو داده و ارسال امروز",
+    description: "تاریخ بو دادن روی هر کیسه درج می‌شود. سفارش شما در کیسه‌های پر از نیتروژن بسته‌بندی و ظرف ۲۴ ساعت ارسال می‌شود.",
   },
   {
     icon: Sparkles,
-    title: "Sustainable Rituals",
-    description:
-      "From 100% biodegradable bags to carbon-neutral shipping, your morning coffee routine leaves a positive mark on the planet.",
+    title: "مراسم پایدار",
+    description: "از کیسه‌های زیست‌تخریب‌پذیر تا ارسال خنثی کربنی، مراسم صبحگاهی شما تأثیری مثبت بر زمین می‌گذارد.",
   },
 ];
 
@@ -39,7 +35,7 @@ export function WhyUsSection() {
             <HeroReveal>
               <div>
                 <span className="inline-flex items-center rounded-full border border-white/50 bg-white/60 px-4 py-2 text-sm font-medium text-(--color-primary) backdrop-blur-xl">
-                  The Roastery Difference
+                  تفاوت بوخانه
                 </span>
               </div>
             </HeroReveal>
@@ -47,7 +43,7 @@ export function WhyUsSection() {
             <HeroReveal delay={0.08}>
               <div>
                 <h2 className="mt-6 text-3xl font-semibold tracking-[-0.04em] text-(--color-foreground) md:text-4xl lg:text-5xl lg:leading-[1.1]">
-                  Uncompromising standards from soil to cup
+                  استانداردهای بی‌نقص از خاک تا فنجان
                 </h2>
               </div>
             </HeroReveal>
@@ -55,9 +51,8 @@ export function WhyUsSection() {
             <HeroReveal delay={0.16}>
               <div>
                 <p className="mt-6 text-base leading-8 text-[rgba(31,23,32,0.72)] md:text-lg">
-                  We believe coffee is more than caffeine—it is a calm morning
-                  ritual. That is why we manage every step with absolute
-                  transparency, passion, and scientific precision.
+                  ما معتقدیم قهوه چیزی فراتر از کافئین است—یک مراسم آرام صبحگاهی.
+                  به همین دلیل هر مرحله را با شفافیت، اشتیاق و دقت علمی مدیریت می‌کنیم.
                 </p>
               </div>
             </HeroReveal>
@@ -71,11 +66,10 @@ export function WhyUsSection() {
 
                   <div>
                     <h4 className="font-semibold text-(--color-foreground)">
-                      Our Quality Pledge
+                      تعهد کیفیت ما
                     </h4>
                     <p className="mt-1 text-sm leading-6 text-[rgba(31,23,32,0.65)]">
-                      If your roast is not perfect, we exchange it, no questions
-                      asked.
+                      اگر بو دادن شما عالی نیست، بدون سوال تعویض می‌کنیم.
                     </p>
                   </div>
                 </div>
@@ -88,11 +82,7 @@ export function WhyUsSection() {
               const Icon = feature.icon;
 
               return (
-                <HeroReveal
-                  key={feature.title}
-                  delay={0.08 * (index + 1)}
-                  y={20}
-                >
+                <HeroReveal key={feature.title} delay={0.08 * (index + 1)} y={20}>
                   <div className="h-full">
                     <article className="glass-card group flex h-full flex-col rounded-4xl border border-white/45 p-6 shadow-[0_16px_50px_rgba(111,78,55,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-white/70 hover:shadow-[0_24px_70px_rgba(111,78,55,0.12)]">
                       <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/55 bg-white/70 text-(--color-primary) transition-all duration-300 group-hover:scale-105 group-hover:bg-(--color-primary) group-hover:text-white">

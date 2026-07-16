@@ -1,44 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ShoppingBag, Star } from "lucide-react";
+import { ArrowLeft, ShoppingBag, Star } from "lucide-react";
 import { HeroReveal } from "../client/hero-reveal";
 
 const products = [
   {
     id: "ethiopian-bloom",
-    name: "Ethiopian Bloom",
-    description: "Floral aroma, citrus brightness, silky finish",
-    price: "$24",
+    name: "شکوفه اتیوپی",
+    description: "رایحه گل‌دار، درخشش مرکباتی، بافت ابریشمی",
+    price: "۲۴$",
     image: "/assets/products/paket1.jpg",
-    badge: "Best Seller",
-    rating: "4.9",
+    badge: "پرفروش‌ترین",
+    rating: "۴.۹",
   },
   {
     id: "cold-brew",
-    name: "Cold Brew",
-    description: "Dark chocolate body, toasted nuts, bold crema",
-    price: "$27",
+    name: "دم‌آوری سرد",
+    description: "بدن شکلاتی، آجیل بوداده، کرمای پررنگ",
+    price: "۲۷$",
     image: "/assets/products/paket2.jpg",
-    badge: "New Roast",
-    rating: "4.8",
+    badge: "تازه",
+    rating: "۴.۸",
   },
   {
     id: "house-signature",
-    name: "House Signature",
-    description: "Balanced sweetness, caramel notes, smooth finish",
-    price: "$22",
+    name: "امضای خانه",
+    description: "شیرینی متعادل، نت‌های کارامل، پایان نرم",
+    price: "۲۲$",
     image: "/assets/products/paket3.jpg",
-    badge: "Signature",
-    rating: "4.9",
+    badge: "امضای برند",
+    rating: "۴.۹",
   },
   {
     id: "golden-harvest",
-    name: "Golden Harvest",
-    description: "Stone fruit, cocoa aroma, refined acidity",
-    price: "$29",
+    name: "برداشت طلایی",
+    description: "میوه هسته‌دار، عطر کاکائو، اسیدیته ظریف",
+    price: "۲۹$",
     image: "/assets/products/paket4.jpg",
-    badge: "Limited",
-    rating: "5.0",
+    badge: "نسخه محدود",
+    rating: "۵.۰",
   },
 ];
 
@@ -50,16 +50,16 @@ export function FeaturedProductsSection() {
           <HeroReveal>
             <div className="max-w-2xl">
               <span className="inline-flex items-center rounded-full border border-white/50 bg-white/60 px-4 py-2 text-sm font-medium text-(--color-primary) backdrop-blur-xl">
-                Featured selection
+                انتخاب ویژه
               </span>
 
               <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-(--color-foreground) md:text-4xl lg:text-5xl">
-                Crafted for everyday rituals and slow premium moments
+                برای لحظات روزمره و تجربه‌های خاص
               </h2>
 
               <p className="mt-4 max-w-xl text-base leading-8 text-[rgba(31,23,32,0.72)] md:text-lg">
-                Explore our most loved coffees, roasted in small batches with
-                refined flavor profiles and a modern specialty experience.
+                محبوب‌ترین قهوه‌های ما را کشف کنید که با روشی هنرمندانه بو داده
+                شده و تجربه‌ای مدرن از طعم را ارائه می‌دهند.
               </p>
             </div>
           </HeroReveal>
@@ -69,8 +69,8 @@ export function FeaturedProductsSection() {
               href="/shop"
               className="inline-flex h-12 items-center justify-center rounded-full border border-white/50 bg-white/60 px-6 text-sm font-medium text-(--color-foreground) backdrop-blur-xl transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/80"
             >
-              View all products
-              <ArrowRight className="ml-2 h-4 w-4" />
+              مشاهده همه محصولات
+              <ArrowLeft className="mr-2 h-4 w-4" />
             </Link>
           </HeroReveal>
         </div>
@@ -112,7 +112,7 @@ export function FeaturedProductsSection() {
                   <div className="mt-5 flex items-center justify-between gap-4">
                     <div>
                       <div className="text-xs font-medium uppercase tracking-[0.18em] text-[rgba(31,23,32,0.48)]">
-                        Price
+                        قیمت
                       </div>
                       <div className="mt-1 text-2xl font-semibold text-(--color-foreground)">
                         {product.price}
@@ -124,7 +124,7 @@ export function FeaturedProductsSection() {
                       className="inline-flex h-11 items-center justify-center rounded-full bg-(--color-primary) px-5 text-sm font-medium text-white shadow-[0_14px_34px_rgba(111,78,55,0.18)] transition-all duration-200 hover:bg-(--color-foreground)"
                     >
                       <ShoppingBag className="mr-2 h-4 w-4" />
-                      Buy now
+                      خرید
                     </Link>
                   </div>
                 </div>

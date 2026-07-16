@@ -3,25 +3,22 @@ import { HeroReveal } from "../client/hero-reveal";
 
 const testimonials = [
   {
-    name: "Amir Hossein",
-    role: "Espresso Lover",
-    quote:
-      "The 40/60 blend gave me exactly the kind of crema and body I look for every morning. Strong, smooth, and consistent.",
-    highlight: "40/60 Blend",
+    name: "امیرحسین",
+    role: "عاشق اسپرسو",
+    quote: "ترکیب ۴۰/۶۰ دقیقاً کرما و بدنی را که هر روز دنبالش هستم به من داد. قوی، نرم و یکدست.",
+    highlight: "ترکیب ۴۰/۶۰",
   },
   {
-    name: "Niloofar",
-    role: "Specialty Coffee Drinker",
-    quote:
-      "I usually go for lighter and cleaner cups, and the Arabica profile felt elegant, aromatic, and surprisingly layered.",
-    highlight: "100% Arabica",
+    name: "نیلوفر",
+    role: "دوستدار قهوه تخصصی",
+    quote: "معمولاً به دنبال فنجان‌های سبک‌تر و تمیزتر هستم و پروفایل عربیکا ظریف، خوش‌رایحه و لایه‌لایه بود.",
+    highlight: "۱۰۰٪ عربیکا",
   },
   {
-    name: "Reza",
-    role: "Moka Pot Daily Brew",
-    quote:
-      "I wanted something bold for everyday brewing, and the Robusta-forward selection delivered deep flavor and real energy.",
-    highlight: "Robusta Profile",
+    name: "رضا",
+    role: "دم‌آوری روزانه با موکاپات",
+    quote: "من چیزی پرجرأت برای دم‌آوری روزانه می‌خواستم و انتخاب روبوستا طعم عمیق و انرژی واقعی را به من داد.",
+    highlight: "پروفایل روبوستا",
   },
 ];
 
@@ -44,20 +41,19 @@ export function TestimonialsSection() {
         <div className="mx-auto max-w-3xl text-center">
           <HeroReveal>
             <span className="inline-flex items-center rounded-full border border-white/50 bg-white/60 px-4 py-2 text-sm font-medium text-(--color-primary) backdrop-blur-xl">
-              Customer Notes
+              نظرات مشتریان
             </span>
           </HeroReveal>
 
           <HeroReveal delay={0.08}>
             <h2 className="mt-6 text-3xl font-semibold tracking-[-0.04em] text-(--color-foreground) md:text-4xl lg:text-5xl lg:leading-[1.1]">
-              Brewed into everyday rituals
+              در مراسم روزانه دم می‌شود
             </h2>
           </HeroReveal>
 
           <HeroReveal delay={0.16}>
             <p className="mt-6 text-base leading-8 text-[rgba(31,23,32,0.72)] md:text-lg">
-              A few words from customers who found their preferred roast, flavor
-              balance, and daily coffee rhythm.
+              چند کلمه از مشتریانی که پروفایل مورد نظر، تعادل طعم و ریتم روزانه قهوه خود را یافته‌اند.
             </p>
           </HeroReveal>
         </div>
