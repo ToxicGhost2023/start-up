@@ -26,29 +26,25 @@ export function MobileNav({ navItems }: MobileNavProps) {
       >
         <span className="relative h-4 w-4">
           <span
-            className={`absolute left-0 top-0.5 h-[1.5px] w-4 rounded-full bg-current transition-all duration-200 ${
-              open ? "top-1.75 rotate-45" : ""
-            }`}
+            className={`absolute left-0 top-0.5 h-[1.5px] w-4 rounded-full bg-current transition-all duration-200 ${open ? "top-1.75 rotate-45" : ""
+              }`}
           />
           <span
-            className={`absolute left-0 top-1.75 h-[1.5px] w-4 rounded-full bg-current transition-all duration-200 ${
-              open ? "opacity-0" : ""
-            }`}
+            className={`absolute left-0 top-1.75 h-[1.5px] w-4 rounded-full bg-current transition-all duration-200 ${open ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`absolute left-0 top-3 h-[1.5px] w-4 rounded-full bg-current transition-all duration-200 ${
-              open ? "top-1.75 -rotate-45" : ""
-            }`}
+            className={`absolute left-0 top-3 h-[1.5px] w-4 rounded-full bg-current transition-all duration-200 ${open ? "top-1.75 -rotate-45" : ""
+              }`}
           />
         </span>
       </button>
 
       <div
-        className={`absolute left-0 right-0 top-[calc(100%+12px)] origin-top rounded-3xl border border-[rgba(111,78,55,0.14)] bg-[rgba(248,244,237,0.96)] p-3 shadow-[0_18px_40px_rgba(111,78,55,0.12)] backdrop-blur-md transition-all duration-200 ${
-          open
+        className={`absolute left-0 right-0 top-[calc(100%+12px)] origin-top rounded-3xl border border-[rgba(111,78,55,0.14)] bg-[rgba(248,244,237,0.96)] p-3 shadow-[0_18px_40px_rgba(111,78,55,0.12)] backdrop-blur-md transition-all duration-200 ${open
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-2 opacity-0"
-        }`}
+          }`}
       >
         <nav className="flex flex-col gap-1">
           {navItems.map((item) => (

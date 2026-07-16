@@ -2,19 +2,19 @@ import Link from "next/link";
 
 const footerLinks = {
   shop: [
-    { label: "All Coffee", href: "/shop" },
-    { label: "Best Sellers", href: "/shop/best-sellers" },
-    { label: "New Arrivals", href: "/shop/new" },
+    { label: "همه قهوه‌ها", href: "/shop" },
+    { label: "پرفروش‌ترین‌ها", href: "/shop/best-sellers" },
+    { label: "جدیدترین‌ها", href: "/shop/new" },
   ],
   company: [
-    { label: "About Us", href: "/about" },
-    { label: "Journal", href: "/journal" },
-    { label: "Contact", href: "/contact" },
+    { label: "درباره ما", href: "/about" },
+    { label: "مجله", href: "/journal" },
+    { label: "تماس با ما", href: "/contact" },
   ],
   support: [
-    { label: "Shipping", href: "/shipping" },
-    { label: "Returns", href: "/returns" },
-    { label: "FAQ", href: "/faq" },
+    { label: "حمل و نقل", href: "/shipping" },
+    { label: "بازگشت کالا", href: "/returns" },
+    { label: "سوالات متداول", href: "/faq" },
   ],
 };
 
@@ -34,14 +34,13 @@ export function SiteFooter() {
                 </span>
               </div>
               <p className="mt-5 text-sm leading-7 text-[rgba(31,23,32,0.72)]">
-                Premium coffee, refined design, and a smooth digital experience
-                crafted for modern customers.
+                قهوه ممتاز، طراحی ظریف و تجربه‌ای روان و مدرن برای مشتریان امروزی.
               </p>
             </div>
 
             <div>
               <h3 className="text-sm font-semibold text-(--color-foreground)">
-                Shop
+                فروشگاه
               </h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.shop.map((item) => (
@@ -59,7 +58,7 @@ export function SiteFooter() {
 
             <div>
               <h3 className="text-sm font-semibold text-(--color-foreground)">
-                Company
+                شرکت
               </h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.company.map((item) => (
@@ -77,7 +76,7 @@ export function SiteFooter() {
 
             <div>
               <h3 className="text-sm font-semibold text-(--color-foreground)">
-                Support
+                پشتیبانی
               </h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.support.map((item) => (
@@ -95,8 +94,8 @@ export function SiteFooter() {
           </div>
 
           <div className="mt-10 border-t border-[rgba(111,78,55,0.12)] pt-6">
-            <p className="text-sm text-[rgba(31,23,32,0.56)]">
-              © 2026 We Shop. Crafted for coffee lovers.
+            <p className="text-sm text-[rgba(31,23,32,0.56)] text-center md:text-right">
+              © ۲۰۲۶ We Shop. ساخته شده برای عاشقان قهوه.
             </p>
           </div>
         </div>

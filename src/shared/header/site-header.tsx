@@ -13,6 +13,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 px-4 pt-4 md:px-6">
       <div className="container-shell">
         <div className="flex h-16 items-center justify-between rounded-[28px] border border-[rgba(111,78,55,0.14)] bg-[rgba(248,244,237,0.88)] px-3 shadow-[0_12px_30px_rgba(111,78,55,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] backdrop-blur-md md:h-18 md:px-4">
+
+          {/* لوگو */}
           <Link
             href="/"
             className="inline-flex items-center gap-3 text-(--color-foreground)"
@@ -25,11 +27,12 @@ export function SiteHeader() {
                 We Shop
               </span>
               <span className="hidden text-[11px] text-[rgba(31,23,32,0.56)] md:block">
-                Modern curated store
+                فروشگاه مدرن و انتخاب‌شده
               </span>
             </span>
           </Link>
 
+          {/* منوی دسکتاپ */}
           <nav className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => (
               <Link
@@ -42,6 +45,7 @@ export function SiteHeader() {
             ))}
           </nav>
 
+          {/* دکمه‌های دسکتاپ */}
           <div className="hidden items-center gap-2 lg:flex">
             <Link
               href="/signin"
@@ -57,6 +61,7 @@ export function SiteHeader() {
             </Link>
           </div>
 
+          {/* بخش موبایل و تبلت */}
           <div className="flex items-center gap-2 lg:hidden">
             <Link
               href="/shop"
