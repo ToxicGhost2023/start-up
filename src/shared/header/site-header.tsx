@@ -16,7 +16,7 @@ export function SiteHeader() {
           className="
             relative flex h-16 items-center justify-between
             rounded-[999px]
-            bg-linear-to-r from-(--color-accent)/70 to-(--color-secondary)/70
+            bg-linear-to-r from-accent/70 to-secondary/70
             px-3
             shadow-[8px_8px_20px_rgba(111,78,55,0.15),-8px_-8px_20px_rgba(255,255,255,0.5)]
             backdrop-blur-xl
