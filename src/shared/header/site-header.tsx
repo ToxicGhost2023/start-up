@@ -16,9 +16,11 @@ export function SiteHeader() {
           className="
             relative flex h-16 items-center justify-between
             rounded-[999px]
-            bg-[linear-gradient(180deg,#faf8f3_0%,#f6f4ee_48%,#ebe7df_100%)]
+            bg-linear-to-r from-(--color-accent)/70 to-(--color-secondary)/70
             px-3
-            shadow-[0_16px_24px_-20px_rgba(80,58,43,0.45)]
+            shadow-[8px_8px_20px_rgba(111,78,55,0.15),-8px_-8px_20px_rgba(255,255,255,0.5)]
+            backdrop-blur-xl
+            border border-white/40
             md:h-18 md:px-4
           "
         >
@@ -26,7 +28,7 @@ export function SiteHeader() {
             href="/"
             className="inline-flex items-center gap-3 text-[#1f1720]"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(145deg,#7a5840,#5f4331)] text-sm font-bold text-white">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-(--color-primary) to-(--color-accent) text-sm font-bold text-white shadow-[3px_3px_8px_rgba(111,78,55,0.2),-3px_-3px_8px_rgba(255,255,255,0.3)]">
               W
             </span>
 
@@ -46,7 +48,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-[rgba(31,23,32,0.68)] transition-colors duration-200 hover:bg-white/50 hover:text-[#1f1720]"
+                className="rounded-full px-4 py-2 text-sm font-medium text-[rgba(31,23,32,0.68)] transition-all duration-200 hover:bg-white/40 hover:text-[#1f1720] hover:shadow-[inset_3px_3px_6px_rgba(111,78,55,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.4)]"
               >
                 {item.label}
               </Link>
@@ -63,7 +65,7 @@ export function SiteHeader() {
 
             <Link
               href="/shop"
-              className="inline-flex h-11 items-center justify-center rounded-full bg-[#6f4e37] px-5 text-sm font-medium text-white transition-colors hover:bg-[#1f1720]"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-(--color-primary) px-5 text-sm font-medium text-white shadow-[4px_4px_12px_rgba(111,78,55,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)] transition-all duration-200 hover:bg-[#1f1720] hover:shadow-[4px_4px_12px_rgba(31,23,32,0.3)]"
             >
               شروع خرید
             </Link>
@@ -72,7 +74,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2 lg:hidden">
             <Link
               href="/shop"
-              className="inline-flex h-10 items-center justify-center rounded-full bg-[#6f4e37] px-4 text-sm font-medium text-white transition-colors hover:bg-[#1f1720]"
+              className="inline-flex h-10 items-center justify-center rounded-full bg-(--color-primary) px-4 text-sm font-medium text-white shadow-[4px_4px_12px_rgba(111,78,55,0.25),-4px_-4px_12px_rgba(255,255,255,0.15)] transition-colors duration-200 hover:bg-[#1f1720]"
             >
               خرید
             </Link>
