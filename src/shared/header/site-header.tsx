@@ -48,7 +48,7 @@ export function SiteHeader() {
           {/* دکمه‌های دسکتاپ */}
           <div className="hidden items-center gap-2 lg:flex">
             <Link
-              href="/signin"
+              href="/login"
               className="inline-flex h-10 items-center justify-center rounded-full px-4 text-sm font-medium text-[rgba(31,23,32,0.72)] transition-colors duration-200 hover:text-(--color-foreground)"
             >
               ورود
